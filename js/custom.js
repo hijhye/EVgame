@@ -48,7 +48,8 @@ function move() {
       elevator.style.marginTop = "-100vh";
     }, 1000);
   } else {
-    guide.textContent = "오른쪽 숫자판에 숫자를 입력하고 닫기버튼을 눌러줘~~";
+    guide.innerHTML =
+      "<p>오른쪽 숫자판에 <span>숫자를 입력</span>하고<br>닫기버튼을 눌러줘~~</p>";
   }
 }
 
@@ -75,7 +76,9 @@ function playGame() {
   }
   userNum = user.value;
   resultStars.textContent = "★".repeat(chances);
-
+  if (userNum < 1 && userNum > 50) {
+    guide.innerHTML = `이 아파트는 <span>1층부터 50층</span>까지만 있엉ㅠㅠ`;
+  }
   if (userNum === random) {
     resultText.textContent = "정답이곰~! 우리가 해냈곰!";
     isGameOver = true;
@@ -86,13 +89,13 @@ function playGame() {
   } else if (!userNum == "" && userNum > random) {
     resultText.textContent = "아까비! 조금 더 아래곰!";
     setTimeout(() => {
-      guide.textContent = `${userNum}층보다는 아래층이었어! 다시 한 번 시도해보자~!!`;
+      guide.innerHTML = `<span>${userNum}층</span>보다는 아래층이었어!<br>다시 한 번 시도해보자~!!`;
     }, 3000);
     isGameOver = false;
   } else if (!userNum == "" && userNum < random) {
     resultText.textContent = "더 높은 층이곰! Up! Up!";
     setTimeout(() => {
-      guide.textContent = `${userNum}층보다는 높은 층인가봐! 다시 한 번 시도해보자~!!`;
+      guide.innerHTML = `<span>${userNum}층</span>보다는 높은 층인가봐!<br>다시 한 번 시도해보자~!!`;
     }, 3000);
     isGameOver = false;
   }
