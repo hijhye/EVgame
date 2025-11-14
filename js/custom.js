@@ -66,7 +66,9 @@ let resultText = document.querySelector(".resultTxtBox p");
 let isGameOver;
 
 function playGame() {
-  chances--;
+  if (!userNum == "") {
+    chances--;
+  }
   userNum = user.value;
   resultStars.textContent = "★".repeat(chances);
 
@@ -77,13 +79,13 @@ function playGame() {
     retry.textContent = "처음부터 다시 해볼까? ";
     resultText.textContent = "으앙! 별을 다 잃었곰...";
     isGameOver = true;
-  } else if (userNum > random) {
+  } else if (!userNum == "" && userNum > random) {
     resultText.textContent = "아까비! 조금 더 아래곰!";
     setTimeout(() => {
       guide.textContent = `${userNum}층보다는 아래층이었어! 다시 한 번 시도해보자~!!`;
     }, 3000);
     isGameOver = false;
-  } else if (userNum < random) {
+  } else if (!userNum == "" && userNum < random) {
     resultText.textContent = "더 높은 층이곰! Up! Up!";
     setTimeout(() => {
       guide.textContent = `${userNum}층보다는 높은 층인가봐! 다시 한 번 시도해보자~!!`;
