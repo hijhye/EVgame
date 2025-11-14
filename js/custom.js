@@ -34,6 +34,11 @@ let close = document.querySelector(".game .close");
 let guide = document.querySelector(".game .textBox p");
 
 close.addEventListener("click", () => {
+  move();
+  playGame();
+});
+
+function move() {
   userNum = user.value;
   if (!userNum == "") {
     elevatorDoor.forEach((door) => {
@@ -45,8 +50,7 @@ close.addEventListener("click", () => {
   } else {
     guide.textContent = "오른쪽 숫자판에 숫자를 입력하고 닫기버튼을 눌러줘~~";
   }
-  playGame();
-});
+}
 
 function resetGame() {
   chances = 5;
@@ -104,4 +108,16 @@ retryBtn.addEventListener("click", () => {
   elevatorDoor.forEach((door) => {
     door.style.width = "0%";
   });
+});
+
+//엔터
+user.addEventListener("keydown", function (e) {
+  userNum = user.value;
+
+  if (e.key === "Enter") {
+    if (!userNum == "") {
+      move();
+      playGame();
+    }
+  }
 });
