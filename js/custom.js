@@ -57,9 +57,9 @@ function resetGame() {
     chances = 5;
     random = Math.floor(Math.random() * 50) + 1;
     console.log('새로운 정답:', random);
-    resultStars.textContent = '★'.repeat(chances);
-    resultText.textContent = '다시 한 번 출발! 느낌이 오는 층으로 이동해보자!!';
     isGameOver = false;
+    guide.innerHTML = guide.innerHTML =
+        '다시 한 번 출발! 느낌이 오는 층으로 이동해보자!!';
 }
 
 //3-2
@@ -87,6 +87,10 @@ function playGame() {
         retry.textContent = '처음부터 다시 해볼까? ';
         resultText.textContent = '으앙! 별을 다 잃었곰...';
         isGameOver = true;
+        setTimeout(() => {
+            guide.innerHTML = guide.innerHTML =
+                '다시 한 번 출발! 느낌이 오는 층으로 이동해보자!!';
+        }, 3000);
     } else if (!userNum == '' && userNum > random) {
         resultText.textContent = '아까비! 조금 더 아래곰!';
         setTimeout(() => {
