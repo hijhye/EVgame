@@ -191,6 +191,9 @@ body {
   font-size: 3vw;
   text-shadow: 1px 1px 5px #fff;
 }
+.result .top .textBox {
+  display: none;
+}
 
 .resultTxtBox {
   width: 90%;
@@ -209,7 +212,25 @@ body {
   padding: 10px;
   top: 50px;
   right: -20px;
+  background-color: #6b6fe5;
+  color: #fff;
   border: 10px solid #6b6fe5;
-  background-color: #fff;
-  color: #ff5959;
+}
+.result .btn:hover {
+  font-size: 2vw;
+}
+.result .next {
+  width: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 30%;
+  animation: ani 2s infinite linear;
+}
+@keyframes ani {
+  0% {
+    width: 1.5rem;
+  }
+  50% {
+    width: 1.7rem;
+  }
 }
