@@ -24,213 +24,435 @@ body {
 }
 
 /*start*/
-
-.fullWrap {
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.title,
-.story,
-.game,
-.result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100vh;
-  box-sizing: border-box;
-}
-.wrap {
-  width: 90%;
-  height: 90vh;
-  border-radius: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(5px);
-  box-sizing: border-box;
-}
-
-.btn {
-  background-color: #6b6fe5;
-  color: #fff;
-  padding: 20px 50px;
-  font-family: "DungeonFighterOnlineBeatBeat";
-  border-radius: 50px;
-  font-size: 1vw;
-}
-.textBox {
-  font-family: "DungeonFighterOnlineBeatBeat";
-  color: #ff5959;
-  border: 10px solid #6b6fe5;
-  background-color: #fff;
-  border-radius: 200px;
-  text-align: center;
-  font-size: 2vw;
-  display: inline-block;
-  padding: 30px 50px;
-}
-.textBox span {
-  color: #ff9c4b;
-  font-size: 2.5vw;
-}
-
-.intro {
-  background-image: url(../img/bg_title.jpg);
-  background-size: cover;
-  background-attachment: fixed;
-  overflow: hidden;
-}
-.title .wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
-.story .wrap {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  align-items: center;
-  padding-top: 100px;
-}
-.story .btn {
-  position: absolute;
-  width: 20%;
-  right: 5%;
-  bottom: 5%;
-}
-
-.game,
-.result {
-  background-image: url(../img/bg_blur.png);
-  background-size: 110%;
-  background-position: center center;
-}
-
-.game {
-  width: 100%;
-  height: 100vh;
-  background: linear-gradient(gray, rgb(201, 201, 201));
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  position: relative;
-  transition: margin-top 1.2s ease-in-out;
-  border: 1px solid #000;
-  box-sizing: border-box;
-  text-align: center;
-}
-
-.game .doors {
-  width: 50%;
-  margin: 0px auto;
-  display: flex;
-  justify-content: space-between;
-  background-image: url(../img/bg_blur.png);
-  background-position: center center;
-}
-.game .door {
-  width: 0%;
-  height: 100vh;
-  border: 4px solid #0f0f0f;
-  box-sizing: border-box;
-  background: linear-gradient(rgb(201, 201, 201), gray);
-  transition: width 1s ease-in-out;
-}
-.game .gameWrap {
-  position: absolute;
-  width: 100%;
-  height: 100vh;
-}
-.game .guide {
-  width: 35%;
-  position: absolute;
-  bottom: 0;
-  left: 5%;
-}
-.game .elevator {
-  width: 25%;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-.game .elevator input {
-  font-family: "DungeonFighterOnlineBeatBeat";
-  width: 200px;
-  height: 100px;
-  border-radius: 20px;
-  text-align: center;
-  font-size: 2vw;
-  margin-bottom: 10px;
-}
-.game .evBtn {
-  background-color: #646464;
-  color: #fff;
-  border: 1px solid #000;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-}
-
-.result {
-  flex-direction: column;
-}
-.result .top {
-  width: 80%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  position: relative;
-}
-.result .top .stars {
-  font-family: "DungeonFighterOnlineBeatBeat";
-  color: #ffbb00;
-  font-size: 3vw;
-  text-shadow: 1px 1px 5px #fff;
-}
-.result .top .textBox {
-  display: none;
-}
-
-.resultTxtBox {
-  width: 90%;
-  height: 20vh;
-  display: flex;
-  align-items: center;
-}
-.resultTxtBox p {
-  width: 100%;
-}
-
-.result .btn {
-  font-size: 1.2vw;
-  position: absolute;
-  aspect-ratio: 1;
-  padding: 10px;
-  top: 50px;
-  right: -20px;
-  background-color: #6b6fe5;
-  color: #fff;
-  border: 10px solid #6b6fe5;
-}
-.result .btn:hover {
-  font-size: 2vw;
-}
-.result .next {
-  width: 1.5rem;
-  cursor: pointer;
-  position: absolute;
-  right: 30%;
-  animation: ani 2s infinite linear;
-}
-@keyframes ani {
-  0% {
-    width: 1.5rem;
+@media (max-width: 720px) {
+  .fullWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
   }
-  50% {
-    width: 1.7rem;
+
+  .title,
+  .story,
+  .game,
+  .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  .wrap {
+    width: 90%;
+    height: 90vh;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+  }
+
+  .btn {
+    background-color: #6b6fe5;
+    color: #fff;
+    padding: 20px 50px;
+    font-family: "DungeonFighterOnlineBeatBeat";
+    border-radius: 50px;
+    font-size: 1rem;
+  }
+  .textBox {
+    font-family: "DungeonFighterOnlineBeatBeat";
+    color: #ff5959;
+    border: 10px solid #6b6fe5;
+    background-color: #fff;
+    border-radius: 200px;
+    text-align: center;
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 30px 50px;
+    box-sizing: border-box;
+  }
+  .textBox span {
+    color: #ff9c4b;
+    font-size: 2rem;
+  }
+
+  .intro {
+    background-image: url(../img/bg_title.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  .title .wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding: 40% 0;
+  }
+  .title img {
+    width: 80%;
+  }
+  .story .wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    padding: 20% 0;
+  }
+  .story .btn {
+    position: absolute;
+    right: 5%;
+    bottom: 5%;
+  }
+  .story .imgWrap {
+    text-align: center;
+  }
+  .story img {
+    width: 80%;
+    margin: 0px auto;
+  }
+  .game,
+  .result {
+    background-image: url(../img/bg_blur.png);
+    background-size: 110%;
+    background-position: center center;
+  }
+
+  .game {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(gray, rgb(201, 201, 201));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: margin-top 1.2s ease-in-out;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .game .doors {
+    width: 40%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../img/bg_blur.png);
+    background-position: center center;
+  }
+  .game .door {
+    width: 0%;
+    height: 100vh;
+    border: 4px solid #0f0f0f;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(201, 201, 201), gray);
+    transition: width 1s ease-in-out;
+  }
+  .game .gameWrap {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
+  .game .guide {
+    width: 35%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+  }
+  .game .elevator {
+    width: 25%;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .game .elevator input {
+    font-family: "DungeonFighterOnlineBeatBeat";
+    width: 100%;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  .game .evBtn {
+    background-color: #646464;
+    color: #fff;
+    border: 1px solid #000;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 0.5rem;
+  }
+
+  .result {
+    flex-direction: column;
+    padding-top: 40%;
+  }
+  .result .top {
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+  }
+  .result .top .stars {
+    font-family: "DungeonFighterOnlineBeatBeat";
+    color: #ffbb00;
+    font-size: 2rem;
+    text-shadow: 1px 1px 5px #fff;
+  }
+  .result .top .textBox {
+    display: none;
+  }
+
+  .resultTxtBox {
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+  }
+  .resultTxtBox p {
+    width: 100%;
+  }
+
+  .result .btn {
+    font-size: 1.2rem;
+    position: absolute;
+    aspect-ratio: 1;
+    padding: 10px;
+    top: 50px;
+    right: 0px;
+    background-color: #6b6fe5;
+    color: #fff;
+    border: 10px solid #6b6fe5;
+  }
+  .result .btn:hover {
+    font-size: 2rem;
+  }
+  .result .next {
+    width: 1.5rem;
+    cursor: pointer;
+
+    animation: ani 2s infinite linear;
+  }
+  @keyframes ani {
+    0% {
+      width: 1.5rem;
+    }
+    50% {
+      width: 1.7rem;
+    }
+  }
+}
+@media (min-width: 1220px) {
+  .fullWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .title,
+  .story,
+  .game,
+  .result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  .wrap {
+    width: 90%;
+    height: 90vh;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+  }
+
+  .btn {
+    background-color: #6b6fe5;
+    color: #fff;
+    padding: 20px 50px;
+    font-family: "DungeonFighterOnlineBeatBeat";
+    border-radius: 50px;
+    font-size: 1vw;
+  }
+  .textBox {
+    font-family: "DungeonFighterOnlineBeatBeat";
+    color: #ff5959;
+    border: 10px solid #6b6fe5;
+    background-color: #fff;
+    border-radius: 200px;
+    text-align: center;
+    font-size: 2vw;
+    display: inline-block;
+    padding: 30px 50px;
+  }
+  .textBox span {
+    color: #ff9c4b;
+    font-size: 2.5vw;
+  }
+
+  .intro {
+    background-image: url(../img/bg_title.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+  }
+  .title .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .story .wrap {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    padding-top: 100px;
+  }
+  .story .btn {
+    position: absolute;
+    width: 20%;
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .game,
+  .result {
+    background-image: url(../img/bg_blur.png);
+    background-size: 110%;
+    background-position: center center;
+  }
+
+  .game {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(gray, rgb(201, 201, 201));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    transition: margin-top 1.2s ease-in-out;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+  .game .doors {
+    width: 50%;
+    margin: 0px auto;
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../img/bg_blur.png);
+    background-position: center center;
+  }
+  .game .door {
+    width: 0%;
+    height: 100vh;
+    border: 4px solid #0f0f0f;
+    box-sizing: border-box;
+    background: linear-gradient(rgb(201, 201, 201), gray);
+    transition: width 1s ease-in-out;
+  }
+  .game .gameWrap {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+  }
+  .game .guide {
+    width: 35%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+  }
+  .game .elevator {
+    width: 25%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .game .elevator input {
+    font-family: "DungeonFighterOnlineBeatBeat";
+    width: 200px;
+    height: 100px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 2vw;
+    margin-bottom: 10px;
+  }
+  .game .evBtn {
+    background-color: #646464;
+    color: #fff;
+    border: 1px solid #000;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .result {
+    flex-direction: column;
+  }
+  .result .top {
+    width: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    position: relative;
+  }
+  .result .top .stars {
+    font-family: "DungeonFighterOnlineBeatBeat";
+    color: #ffbb00;
+    font-size: 3vw;
+    text-shadow: 1px 1px 5px #fff;
+  }
+  .result .top .textBox {
+    display: none;
+  }
+
+  .resultTxtBox {
+    width: 90%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+  }
+  .resultTxtBox p {
+    width: 100%;
+  }
+
+  .result .btn {
+    font-size: 1.2vw;
+    position: absolute;
+    aspect-ratio: 1;
+    padding: 10px;
+    top: 50px;
+    right: -20px;
+    background-color: #6b6fe5;
+    color: #fff;
+    border: 10px solid #6b6fe5;
+  }
+  .result .btn:hover {
+    font-size: 2vw;
+  }
+  .result .next {
+    width: 1.5rem;
+    cursor: pointer;
+
+    animation: ani 2s infinite linear;
+  }
+  @keyframes ani {
+    0% {
+      width: 1.5rem;
+    }
+    50% {
+      width: 1.7rem;
+    }
   }
 }
